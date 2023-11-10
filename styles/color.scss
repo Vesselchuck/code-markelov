@@ -1,0 +1,29 @@
+body {
+  background-color: hsl(0, 0%, 97%);
+  color: hsl(0, 0%, 5%);
+}
+
+header {
+  background-color: hsl(0, 0%, 93%);
+  border-color: hsl(0, 0%, 5%);
+  nav {
+    ul {
+      li {
+        a {
+          color: hsl(0, 0%, 5%);
+          i {
+            color: hsl(340, 58%, 43%);
+          }
+        }
+      }
+    }
+  }
+}
+
+main {
+  article {
+    img {
+      border-color: hsl(0, 0%, 5%);
+    }
+  }
+}

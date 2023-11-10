@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Changa:wght@200;300;400;500;600;700;800&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+body {
+  font-family: "Open Sans";
+}
+
+h1, h2, h3, h4 {
+  font-family: "Changa";
+  font-weight: 600;
+}
+
+header {
+  background-color: white;
+  border-bottom: 2px solid;
+  font-family: "Changa";
+  font-weight: 600;
+  left: 0;
+  padding: 0 18.5rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 99;
+  nav {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    width: 58rem;
+    #logo {
+      font-size: 1.75rem;
+      margin: 0;
+    }
+    ul {
+      font-size: 1.25rem;
+      list-style-type: none;
+      margin: 0;
+      padding-left: 0;
+      li {
+        display: inline-block;
+        padding: 1rem;
+        a {
+          text-decoration: none;
+          color: black;
+          i {
+            color: #ac2e58;
+          }
+        }
+      }
+      li:hover {
+        span {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+main {
+  margin-top: 4.4rem;
+  padding: 0 18rem;
+  article {
+    img {
+      border-radius: 0.75rem;
+      border: 2px solid;
+      margin-left: 2rem;
+      width: 19rem;
+    }
+  }
+  #about-me {
+    align-items: end;
+    display: flex;
+  }
+  #skills {
+    div {
+      align-items: center;
+      display: flex;
+      justify-content: space-around;
+      i {
+        font-size: 4rem;
+      }
+    }
+  }
+  #contacts {
+    div {
+      align-items: center;
+      display: flex;
+      justify-content: space-around;
+      width: 33rem;
+      i {
+        font-size: 4rem;
+      }
+    }
+  }
+}
+
+footer {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding: 0 18rem;
+}
