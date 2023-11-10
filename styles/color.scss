@@ -21,9 +21,14 @@ header {
 }
 
 main {
-  article {
-    img {
-      border-color: hsl(0, 0%, 5%);
+  #about-me {
+    #my-photo {
+      img {
+        border-color: hsl(0, 0%, 5%);
+      }
+    }
+    #fullscreen-photo {
+      background-color: rgba(0, 0, 0, .75);
     }
   }
 }
