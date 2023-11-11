@@ -61,7 +61,7 @@ main {
         border-radius: 0.75rem;
         border: 2px solid;
         margin-left: 2rem;
-        width: 20rem;
+        width: 18rem;
       }
     }
     #fullscreen-photo {
@@ -77,6 +77,27 @@ main {
       z-index: 99;
       img {
         height: 90%;
+      }
+      #button-container {
+        align-items: center;
+        border-radius: 100%;
+        border: 2px solid;
+        display: flex;
+        flex-direction: column;
+        height: 5rem;
+        position: fixed;
+        right: 2.8rem;
+        top: 2.2rem;
+        width: 5rem;
+        #close-button {
+          font-size: 3rem;
+          margin-top: 0.1rem;
+        }
+        #button-text {
+          font-family: "Changa";
+          font-size: 1.75rem;
+          margin-top: -1rem;
+        }
       }
     }
   }
