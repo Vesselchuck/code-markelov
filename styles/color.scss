@@ -1,18 +1,29 @@
+:root {
+  --accent: rgb(173, 46, 88);
+  --button-active: rgb(121, 32, 62);
+  --button-hover: rgb(173, 46, 88);
+  --close-button: rgb(237, 237, 237);
+  --dark-transparent: rgba(0, 0, 0, .75);
+  --primary: rgb(247, 247, 247);
+  --primary-alt: rgb(237, 237, 237);
+  --secondary: rgb(13, 13, 13);
+}
+
 body {
-  background-color: hsl(0, 0%, 97%);
-  color: hsl(0, 0%, 5%);
+  background-color: var(--primary);
+  color: var(--secondary);
 }
 
 header {
-  background-color: hsl(0, 0%, 93%);
-  border-color: hsl(0, 0%, 5%);
+  background-color: var(--primary-alt);
+  border-color: var(--secondary);
   nav {
     ul {
       li {
         a {
-          color: hsl(0, 0%, 5%);
+          color: var(--secondary);
           i {
-            color: hsl(340, 58%, 43%);
+            color: var(--accent)
           }
         }
       }
@@ -24,16 +35,57 @@ main {
   #about-me {
     #my-photo {
       img {
-        border-color: hsl(0, 0%, 5%);
+        border-color: var(--secondary);
       }
     }
     #fullscreen-photo {
-      background-color: rgba(0, 0, 0, .75);
+      background-color: transparent;
+      &.active {
+        background-color: var(--dark-transparent);
+      }
       #button-container {
-        background-color: hsl(0, 0%, 93%);
-        border-color: hsl(0, 0%, 5%);
-        color: hsl(0, 0%, 5%);
+        color: var(--close-button);
+        &:hover {
+          #close-button, #button-text {
+            color: var(--button-hover);
+          }
+        }
+        &:active {
+          #close-button, #button-text {
+            color: var(--button-active);
+          }
+        }
+      }      
+    }
+  }
+  #projects {
+    a {
+      color: var(--accent);
+      &:active {
+        color: var(--button-active);
       }
     }
   }
+  #contacts {
+    div i {
+      color: var(--secondary);
+      &:hover {
+        color: var(--button-hover);
+      }
+      &:active {
+        color: var(--button-active);
+      }
+    }
+  }
+  #theme-button {
+    .fa-solid {
+      color: var(--secondary);
+      &:hover {
+        color: var(--button-hover);
+      }
+      &:active {
+        color: var(--button-active);
+      }
+    }
+  }  
 }
