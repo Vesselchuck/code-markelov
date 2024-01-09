@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Styling -->
-  <link rel="stylesheet" type="text/css" href="styles/style.css" />
+  <!-- Layout -->
+  <link rel="stylesheet" type="text/css" href="styles/layout.css" />
+  <!-- Typography -->
+  <link rel="stylesheet" type="text/css" href="styles/typography.css" />
   <!-- Coloring -->
-  <link rel="stylesheet" type="text/css" href="styles/color.css" />
+  <link rel="stylesheet" type="text/css" href="styles/coloring.css" />
   <meta charset="UTF-8">
   <!-- Website's Author -->
   <meta name="author" content="Arsenii Markelov">
@@ -17,35 +19,35 @@
   <link rel="icon" type="image/x-icon" href="assets/favicon.webp">
   <!-- Font Awesome -->
   <script src="https://kit.fontawesome.com/ae090e8de5.js" crossorigin="anonymous"></script>
-  <!--  -->
+  <!-- JavaScript -->
   <script src="scripts/script.js" defer></script>
 </head>
-<body>
+<body class="flex-container">
   <header>
     <nav>
 
-      <h1 id="logo">Arsenii Markelov</h1>
+      <h1 id="logo">Arsenii Markelov, B.Sc.</h1>
 
-      <ul class="navigation-menu">
-        <li>
+      <ul id="nav-menu">
+        <li class="nav-link">
           <a href="#">
             <i class="fa-solid fa-circle-info"></i>
             <span>About Me</span>
           </a>
         </li>
-        <li>
+        <li class="nav-link">
           <a href="#skills">
             <i class="fa-solid fa-code"></i>
             <span>Skills</span>
           </a>
         </li>
-        <li>
+        <li class="nav-link">
           <a href="#projects">
             <i class="fa-solid fa-diagram-project"></i>
             <span>Projects</span>
           </a>
         </li>
-        <li>
+        <li class="nav-link">
           <a href="#contacts">
             <i class="fa-solid fa-address-book"></i>
             <span>Contacts</span>
@@ -59,20 +61,20 @@
   <main>
 
     <article id="about-me">
-      <div>
+      <section>
         <h2>About Me</h2>
-        <p>Hello! I'm Arsenii, an aspiring Front-End Developer with a strong foundation in HTML, CSS, and JavaScript. I'm passionate about creating visually appealing and user-friendly websites. My goal is to stay updated with the latest industry trends and continuously improve my skills.</p>
+        <p>Hello! I'm Arsenii Markelov, an aspiring Front-End Developer with a strong foundation in HTML, CSS, and JavaScript. I'm passionate about creating visually appealing and user-friendly websites. My goal is to stay updated with the latest industry trends and continuously improve my skills.</p>
         <p>My journey into Front-End began with a curiosity for crafting digital experiences that are not only functional but also aesthetically pleasing. I enjoy the creative process of turning ideas into interactive web pages, optimizing website performance, and ensuring a seamless user experience.</p>
-        <p>I value teamwork and effective communication when working with Back-End developers, designers, and clients. I'm excited about the endless possibilities in Front-End Development and look forward to contributing to user-centric web solutions!</p>
-      </div>
-      <div id="my-photo">
+        <p id="third-paragraph">I value teamwork and effective communication when working with Back-End developers, designers, and clients. I'm excited about the endless possibilities in Front-End Development and look forward to contributing to user-centric web solutions!</p>
+      </section>
+      <section id="my-photo">
         <img src="assets/me.webp" alt="">
-      </div>
+      </section>
     </article>
 
     <article id="skills">
       <h2>Skills</h2>
-      <div>
+      <section class="brands">
         <i class="fa-brands fa-chrome"></i>
         <i class="fa-brands fa-css3-alt"></i>
         <i class="fa-brands fa-git"></i>
@@ -80,7 +82,7 @@
         <i class="fa-brands fa-html5"></i>
         <i class="fa-brands fa-js"></i>
         <i class="fa-solid fa-terminal"></i>
-      </div>
+      </section>
     </article>
 
     <article id="projects">
@@ -103,12 +105,16 @@
 
     <article id="contacts">
       <h2>Contacts</h2>
-      <p>Feel free to contact me if you have any riveting projects!</p>
-      <div>
+      <p>Have an exciting concept or just want to connect? I'm always on the lookout for riveting projects. Whether you are a fellow developer, a potential client, or just have a brilliant idea, let us chat and explore possibilities! Your thoughts are valuable.</p>
+      <section id="contact-links">
         <a href="https://discordapp.com/users/277533560213209098/" target="_blank"><i class="fa-brands fa-discord"></i></a>
         <a href="https://t.me/Vesselchuck" target="_blank"><i class="fa-brands fa-telegram"></i></a>
         <a href="mailto:vesselchuck.prime@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i></a>
-      </div>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+      </section>
     </article>
 
     <button id="theme-button">
@@ -119,7 +125,7 @@
   </main>
 
   <footer>
-    <h3>Made with passion in 2023</h3>
+    <h3 id="copyright">&#169; 2023-2024 A. Markelov. All Rights Reserved.</h3>
   </footer>
 
 </body>

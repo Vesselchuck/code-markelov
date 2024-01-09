@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,700;1,700&family=Changa:wght@600&family=Open+Sans:ital@0;1&display=swap');
+
+// Define global variables for font-family
+:root {
+  --heading: "Changa";
+  --regular: "Open Sans";
+  --special: "Chakra Petch";
+}
+
+// Apply global font-family to the entire body
+body {
+  font-family: var(--regular);
+}
+
+// Styling for headings
+.heading {
+  font-family: var(--heading);
+  font-weight: 600;
+}
+
+// Styling for special elements
+.special {
+  font-family: var(--special);
+  font-weight: 700;
+}
+
+// Extend heading styles to elements from h1 to h4
+h1, h2, h3, h4 {
+  @extend .heading;
+}
+
+// Header styles with nested navigation and logo
+header {
+  @extend .heading;
+  nav {
+    #logo {
+      @extend .special;
+      font-size: 1.75rem;
+      // Underline effect on hover and active states
+      &:hover,
+      &:active {
+        span {
+          text-decoration: underline;
+        }
+      }
+    }
+    #nav-menu {
+      font-size: 1.25rem;
+      list-style-type: none;
+      .nav-link {
+        a {
+          text-decoration: none;
+        }
+        // Underline effect on hover and active states
+        &:hover,
+        &:active {
+          a span {
+            text-decoration: underline;
+          }
+        }
+      }
+      #theme-button-new {
+        font-family: var(--heading);
+        font-size: 1.25rem;
+        font-weight: 600;
+        text-align: center;
+        i.fa-solid {
+          font-size: inherit;
+        }
+        // Underline effect on hover and active states
+        &:hover,
+        &:active {
+          span {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Main section styles
+main {
+  #about-me {
+    #button {
+      font-size: 3.5rem;
+    }
+    #button-text {
+      @extend .heading;
+      font-size: 2rem;
+    }
+  }
+
+  // Icon styles for various sections
+  #skills i,
+  #contacts i,
+  #theme-button i {
+    font-size: 4rem;
+    text-align: center;
+  }
+
+  // Projects section styles
+  #projects {
+    .fa-ul .fa-li {
+      font-size: 1.6rem;
+    }
+    .fa-ul h3 {
+      font-size: 1.25em;
+      a {
+        text-decoration: none;
+        // Underline effect on hover and active states
+        &:hover,
+        &:active {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+// Footer styles
+footer {
+  #copyright {
+    @extend .special;
+    font-weight: 700;
+    text-align: center;
+  }
+}

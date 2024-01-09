@@ -1,0 +1,491 @@
+// Global styles for the body
+body {
+  &.flex-container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 0;
+  }
+  &.hide-scrollbar {
+    overflow: hidden;
+  }
+}
+
+// Header styles
+header {
+  border-bottom: 0.2rem solid;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  nav {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    #logo {
+      margin: 0;
+      padding: 0.4rem 0;
+      z-index: 12;
+      i.fa-bars {
+        margin-right: 0.6rem;
+      }
+    }
+    #nav-menu {
+      margin: 0;
+      padding-left: 0;
+      z-index: 11;
+
+      // Open state and smooth transition for menu
+      &.open {
+        margin-top: 0;
+      }
+      &.smooth {
+        transition: margin-top 0.4s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+      }
+
+      // Navigation link styles
+      .nav-link {
+        display: inline-block;
+        padding: 0;
+        a {
+          display: inline-block;
+        }
+        span {
+          padding-left: 0.1rem;
+        }
+      }
+
+      // New theme button styles
+      #theme-button-new {
+        border: none;
+        border-top: 0.2rem solid;
+        cursor: pointer;
+        padding: 1rem 2.6rem;
+        width: 16rem;
+        i.fa-moon {
+          display: none;
+        }
+        i.fa-sun {
+          display: inline-block;
+        }
+        span {
+          padding-left: 0.3rem;
+        }
+
+        // Cycle state for new theme button
+        &.cycle {
+          i.fa-moon {
+            display: inline-block;
+          }
+          i.fa-sun {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  // Hamburger menu styles
+  &.hamburger {
+    border-bottom: unset;
+    nav {
+      flex-direction: column;
+      justify-content: center;
+      width: 100%;
+      #logo {
+        align-items: center;
+        border-bottom: 0.2rem solid;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+      }
+      #nav-menu {
+        align-items: center;
+        border: 0.2rem solid;
+        border-radius: 0 0 0.75rem 0.75rem;
+        border-top: unset;
+        display: flex;
+        flex-direction: column;
+      }
+
+      // Border and width for navigation links
+      .nav-link {
+        width: 16rem;
+        &:nth-child(2),
+        &:nth-child(3),
+        &:nth-child(4) {
+          border-top: 0.2rem solid;
+        }
+      }
+    }
+  }
+}
+
+// Main section styles
+main {
+  margin-top: 4.5rem;
+
+  // About me section styles
+  #about-me {
+    align-items: flex-end;
+    display: flex;
+
+    // My photo styles
+    #my-photo {
+      cursor: pointer;
+      img {
+        border-radius: 0.75rem;
+        border: 0.2rem solid;
+      }
+    }
+
+    // Photo background styles
+    #photo-background {
+      align-items: center;
+      display: flex;
+      height: 100%;
+      justify-content: center;
+      left: 0;
+      position: fixed;
+      top: 0;
+      transition: background-color 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+      width: 100%;
+      z-index: 99;
+
+      // Photo container styles
+      #photo-container {
+        display: flex;
+        height: 95%;
+        margin-right: -5rem;
+
+        // Button container styles
+        #button-container {
+          align-items: center;
+          cursor: pointer;
+          display: flex;
+          flex-direction: column;
+          height: 5rem;
+          position: relative;
+          right: 4.4rem;
+          top: 0.3rem;
+          transition: color 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+          width: 5rem;
+
+          // Button icon styles
+          #button {
+            margin-top: -0.2rem;
+          }
+
+          // Button text styles
+          #button-text {
+            height: 2.9rem;
+            margin: -1.2rem 0 0;
+          }
+        }
+
+        // Image of me styles with transitions
+        #me {
+          height: 0%;
+          transition: height 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+
+          &.ninetyPercent {
+            height: 90%;
+          }
+
+          &.hundredPercent {
+            height: 100%;
+          }
+        }
+      }
+    }
+
+    // Column layout styles
+    &.column {
+      align-items: center;
+      flex-direction: column;
+    }
+  }
+
+  // Replacement paragraph styles
+  #replacement-paragraph {
+    margin-top: -1rem;
+  }
+
+  // Skills section styles
+  #skills {
+    .brands {
+      align-items: center;
+      display: flex;
+      justify-content: space-around;
+
+      // Icon styles
+      i {
+        line-height: 5rem;
+        width: 5rem;
+      }
+
+      // Medium, small, and extra-small variations
+      &.medium-two-rows {
+        margin: 0 5.5rem;
+      }
+      &.small-two-rows {
+        margin: 0 4.2rem;
+      }
+      &.extra-small-three-rows {
+        justify-content: space-evenly;
+      }
+    }
+  }
+
+  // Contacts section styles
+  #contacts {
+    #contact-links {
+      align-items: center;
+      display: flex;
+      justify-content: space-around;
+
+      // Icon styles
+      i {
+        line-height: 5rem;
+        width: 5rem;
+      }
+
+      // Medium and small variations
+      &.medium-two-rows {
+        margin: 0 5.5rem;
+      }
+      &.small-two-rows {
+        margin: 0 3rem;
+      }
+    }
+  }
+
+  // Projects section styles
+  #projects {
+    .fa-ul {
+      padding-left: 4rem;
+    }
+  }
+
+  // Default theme button styles
+  #theme-button {
+    align-items: center;
+    background: none;
+    border: none;
+    bottom: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    height: 5rem;
+    justify-content: center;
+    position: fixed;
+    right: 1.4rem;
+    width: 5rem;
+    z-index: 20;
+
+    // Icon styles
+    i {
+      padding: 0.7rem 0.9rem;
+
+      &.fa-moon {
+        display: none;
+      }
+
+      &.fa-sun {
+        display: inline-block;
+      }
+    }
+
+    // Cycle and hidden states
+    &.cycle {
+      i.fa-moon {
+        display: inline-block;
+      }
+      i.fa-sun {
+        display: none;
+      }
+    }
+    &.hidden {
+      display: none;
+    }
+  }
+
+  // Concise state styles
+  &.concise {
+    margin-top: 3.4rem;
+  }
+}
+
+// Media queries for responsive design
+@media only screen and (max-width: 600px) {
+  // Extra small devices (phones, 600px and down)
+  header nav #nav-menu {
+    margin-top: -22.5rem;
+
+    // Padding adjustments for navigation links
+    :nth-child(1) a {
+      padding: 1rem 4.51rem;
+    }
+    :nth-child(2) a {
+      padding: 1rem 5.49rem;
+    }
+    :nth-child(3) a {
+      padding: 1rem 4.83rem;
+    }
+    :nth-child(4) a {
+      padding: 1rem 4.75rem;
+    }
+  }
+
+  // Adjusting main width for extra small devices
+  main {
+    width: 17rem;
+  }
+
+  // Adjusting photo width for extra small devices
+  main #about-me #my-photo img {
+    margin-bottom: 0;
+    margin-left: 0;
+    width: 14rem;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  // Small devices (portrait tablets and large phones, 600px and up)
+  header nav #nav-menu {
+    margin-top: -22.5rem;
+
+    // Padding adjustments for navigation links
+    :nth-child(1) a {
+      padding: 1rem 4.51rem;
+    }
+    :nth-child(2) a {
+      padding: 1rem 5.49rem;
+    }
+    :nth-child(3) a {
+      padding: 1rem 4.83rem;
+    }
+    :nth-child(4) a {
+      padding: 1rem 4.75rem;
+    }
+  }
+
+  // Adjusting main width for small devices
+  main {
+    width: 34rem;
+  }
+
+  // Adjusting photo width for small devices
+  main #about-me #my-photo img {
+    margin-bottom: 0;
+    margin-left: 0;
+    width: 23rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  // Medium devices (landscape tablets, 768px and up)
+  header nav #nav-menu {
+    margin-top: unset;
+
+    // Padding adjustments for navigation links
+    :nth-child(1) a {
+      padding: 1rem 0.5rem;
+    }
+    :nth-child(2) a {
+      padding: 1rem 0.5rem;
+    }
+    :nth-child(3) a {
+      padding: 1rem 0.5rem;
+    }
+    :nth-child(4) a {
+      padding: 1rem 0.5rem;
+    }
+  }
+  
+  // Adjusting main and photo width for medium devices
+  header nav,
+  main {
+    width: 44rem;
+  }
+
+  // Adjusting photo width for medium devices
+  main #about-me #my-photo img {
+    margin-bottom: 1.4rem;
+    margin-left: 2rem;
+    width: 13.6rem;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  // Large devices (laptops/desktops, 992px and up)
+  header nav #nav-menu {
+    margin-top: unset;
+
+    // Padding adjustments for navigation links
+    :nth-child(1) a {
+      padding: 1rem 0.75rem;
+    }
+    :nth-child(2) a {
+      padding: 1rem 0.75rem;
+    }
+    :nth-child(3) a {
+      padding: 1rem 0.75rem;
+    }
+    :nth-child(4) a {
+      padding: 1rem 0.75rem;
+    }
+  }
+
+  // Adjusting main and photo width for large devices
+  header nav,
+  main {
+    width: 51rem;
+  }
+
+  // Adjusting photo width for large devices
+  main #about-me #my-photo img {
+    margin-bottom: 0.9rem;
+    margin-left: 2rem;
+    width: 14.6rem;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  // Extra large devices (large laptops and desktops, 1200px and up)
+  header nav #nav-menu {
+    margin-top: unset;
+
+    // Padding adjustments for navigation links
+    :nth-child(1) a {
+      padding: 1rem;
+    }
+    :nth-child(2) a {
+      padding: 1rem;
+    }
+    :nth-child(3) a {
+      padding: 1rem;
+    }
+    :nth-child(4) a {
+      padding: 1rem;
+    }
+  }
+
+  // Adjusting main width for extra large devices
+  header nav,
+  main {
+    width: 60rem;
+  }
+  
+  // Adjusting photo width for extra large devices
+  main #about-me #my-photo img {
+    margin-bottom: 0rem;
+    margin-left: 2rem;
+    width: 17.2rem;
+  }
+}

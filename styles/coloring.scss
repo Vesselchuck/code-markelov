@@ -1,0 +1,182 @@
+// Define global color variables
+:root {
+  --primary: rgb(23, 25, 28);
+  --secondary: rgb(217, 217, 217);
+  --accent: rgb(173, 26, 75);
+  --button-hover: var(--accent);
+  --button-active: rgb(115, 17, 50);
+  --dark-transparent: rgba(0, 0, 0, 0.75);
+
+  // Light theme variations
+  &.light {
+    --primary: rgb(247, 247, 247);
+    --secondary: rgb(13, 13, 13);
+    --accent: rgb(173, 46, 88);
+    --button-active: rgb(121, 32, 62);
+  }
+}
+
+// Apply global color variables to body
+body {
+  background-color: var(--primary);
+  color: var(--secondary);
+}
+
+// Header styles
+header {
+  background-color: inherit;
+  border-color: inherit;
+
+  // Nested navigation styles
+  nav {
+    // Logo styles
+    #logo {
+      background-color: var(--primary);
+      i.fa-bars {
+        color: var(--accent);
+      }
+      // Change color in active state
+      &:active {
+        span {
+          color: var(--accent);
+        }
+      }
+    }
+
+    // Navigation menu styles
+    #nav-menu {
+      background-color: var(--primary);
+      .nav-link {
+        border-color: var(--secondary);
+        a {
+          color: var(--secondary);
+          i.fa-solid {
+            color: var(--accent);
+          }
+        }
+        // Change color in active state
+        &:active {
+          a span {
+            color: var(--accent);
+          }
+        }
+      }
+
+      // New theme button styles
+      #theme-button-new {
+        background: none;
+        border-color: var(--secondary);
+        color: var(--secondary);
+        i.fa-solid {
+          color: var(--accent);
+        }
+        // Change color in active state
+        &:active {
+          span {
+            color: var(--accent);
+          }
+        }
+      }
+    }
+  }
+
+  // Hamburger menu styles
+  &.hamburger {
+    background-color: unset;
+  }
+}
+
+// Main section styles
+main {
+  // About me section styles
+  #about-me {
+    // My photo styles
+    #my-photo {
+      img {
+        border-color: var(--secondary);
+      }
+    }
+
+    // Photo background styles
+    #photo-background {
+      background-color: transparent;
+
+      // Active state for dark transparent background
+      &.active {
+        background-color: var(--dark-transparent);
+      }
+
+      // Button container styles
+      #button-container {
+        color: transparent;
+
+        // Colored state for button container
+        &.colored {
+          color: rgb(23, 25, 28);
+        }
+
+        // Hover state for button and button text
+        &:hover {
+          #button,
+          #button-text {
+            color: var(--button-hover);
+          }
+        }
+
+        // Active state for button and button text
+        &:active {
+          #button,
+          #button-text {
+            color: var(--button-active);
+          }
+        }
+      }
+    }
+  }
+
+  // Projects section styles
+  #projects {
+    a {
+      color: var(--accent);
+
+      // Active state for links
+      &:active {
+        color: var(--button-active);
+      }
+    }
+  }
+
+  // Contacts section styles
+  #contacts {
+    i {
+      color: var(--secondary);
+
+      // Hover state for icons
+      &:hover {
+        color: var(--button-hover);
+      }
+
+      // Active state for icons
+      &:active {
+        color: var(--button-active);
+      }
+    }
+  }
+
+  // Default theme button styles
+  #theme-button {
+    i.fa-solid {
+      color: var(--secondary);
+
+      // Hover state for theme button icon
+      &:hover {
+        color: var(--button-hover);
+      }
+
+      // Active state for theme button icon
+      &:active {
+        color: var(--button-active);
+      }
+    }
+  }
+}
