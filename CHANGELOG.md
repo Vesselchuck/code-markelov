@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 
-## 1.0.0 - 01/09/2024
+## v1.0.0 - 01/09/2024
 
 ### Added
 - Enhanced DOM manipulation by introducing additional classes and IDs to various HTML elements.
@@ -17,7 +17,7 @@ All notable changes to this project will be documented in this file.
 - Restructured `color.scss` code for improved readability and maintainability, also renamed the file to `coloring.scss`.
 - Completely overhauled the `script.js` file, providing a fully refactored version with approximately more than three times as many lines compared to the previous version.
 
-## 0.9.0 - 11/24/2023
+## v0.9.0 - 11/24/2023
 
 ### Added
 - Introduced a theme switcher, allowing users to seamlessly switch between dark and light modes.
